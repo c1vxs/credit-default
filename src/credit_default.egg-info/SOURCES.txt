@@ -2,6 +2,7 @@ README.md
 pyproject.toml
 src/credit_default/__init__.py
 src/credit_default/cli.py
+src/credit_default/config.py
 src/credit_default/data.py
 src/credit_default/evaluate.py
 src/credit_default/features.py
