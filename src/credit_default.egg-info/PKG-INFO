@@ -1,0 +1,15 @@
+Metadata-Version: 2.4
+Name: credit-default
+Version: 0.1.0
+Summary: Predict credit card default next month (UCI 350)
+Requires-Python: >=3.10
+Requires-Dist: ucimlrepo==0.0.7
+Requires-Dist: pandas==3.1.0
+Requires-Dist: numpy==2.5.4
+Requires-Dist: scikit-learn==1.9.1
+Requires-Dist: matplotlib==3.11.2
+Requires-Dist: joblib==1.6.0
+Requires-Dist: PyYAML==6.0.3
+Provides-Extra: dev
+Requires-Dist: pytest==9.1.1; extra == "dev"
+Requires-Dist: ruff==0.17.2; extra == "dev"
