@@ -1,10 +1,15 @@
 """Load, clean and split the Default of Credit Card Clients dataset (UCI 350)."""
-from pathlib import Path # Path = a file path object, lets us join folders with "/" 
+# Path = a file path object, lets us join folders with "/" 
+# scikit-learn function that cuts the data into train / test
+# ROOT = project folder, load_config = reads config.yaml
+
+from pathlib import Path
 
 import pandas as pd
-from sklearn.model_selection import train_test_split # scikit-learn function that cuts the data into train / test
+from sklearn.model_selection import train_test_split
 
-from credit_default.config import ROOT, load_config  # ROOT = project folder, load_config = reads config.yaml
+from credit_default.config import ROOT, load_config
+
 
 class DatasetLoader:
     """Load the credit default data, clean it and split it once into train / test."""
@@ -21,8 +26,8 @@ class DatasetLoader:
         """loads the UCI file from data -> raw and if its missing it downloads it with ucimlrepo"""
         try:  # try the normal way first: read the file already in the repo
             df = pd.read_excel(self.path, header=1)    # header=1: the file has 2 header rows, the real column names are in the 2nd one
-        except FileNotFoundError:  # file not found -> download it instead
-            from ucimlrepo import fetch_ucirepo   # imported here only, since we only need it when the file is missing
+        except FileNotFoundError:  # file not found -> download it instead. ucimlrepo imported here only, since we only need it when the file is missing
+            from ucimlrepo import fetch_ucirepo
             df = fetch_ucirepo(id=350).data.original     #go to the UCI repo and get dataset num 350 (credit card dataset), return bundle with data, take the part that holds data, gives the whole table in one piece, and stores it in df   
         return df.rename(columns={"default payment next month": self.target}) #renaming it to make it easier to type 
 

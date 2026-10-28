@@ -11,9 +11,10 @@ The preprocessor is only built here, never fitted. It is fitted later inside
 the Pipeline, on the training set only, so no information from the test set
 leaks into the preparation.
 """
+# "Why only these?” → This file only builds the preparation. The model and the pipeline go in models.py.
 
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder, StandardScaler  # "Why only these?” → This file only builds the preparation. The model and the pipeline go in models.py.
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
 CAT = ["SEX","EDUCATION","MARRIAGE"] #categorical values, theyre codes not quantities, you cant say that EDUCATION = 4 is 2 times EDUCATION = 2 
 NUM = ["LIMIT_BAL", "AGE", "PAY_0", "PAY_2", "PAY_3", "PAY_4", "PAY_5", "PAY_6", "BILL_AMT1", "BILL_AMT2", "BILL_AMT3", "BILL_AMT4", "BILL_AMT5", "BILL_AMT6", "PAY_AMT1", "PAY_AMT2", "PAY_AMT3", "PAY_AMT4", "PAY_AMT5", "PAY_AMT6"]
