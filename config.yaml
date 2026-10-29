@@ -1,6 +1,7 @@
 random_state: 42
 test_size: 0.2
 target: default
+threshold: 0.5   # placeholder until Moh chooses it on out-of-fold probabilities
 paths:
   raw_data: data/raw/credit_default.xls
   model: models/model.joblib

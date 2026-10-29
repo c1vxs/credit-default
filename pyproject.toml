@@ -25,3 +25,6 @@ where = ["src"]
 
 [tool.ruff]
 line-length = 100
+
+[project.scripts]
+credit-default = "credit_default.cli:main"
