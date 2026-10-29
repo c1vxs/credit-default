@@ -17,5 +17,5 @@ model:
 # hyperparameter grids for GridSearchCV (notebook Part 5)
 grids:
   logistic_regression: {clf__C: [0.01, 0.1, 1, 10]}
-  knn: {clf__n_neighbors: [15, 25, 51]}
+  knn: {clf__n_neighbors: [15, 25, 51, 75, 101, 151, 201, 301]}
   linear_svm: {clf__C: [0.01, 0.1, 1]}
