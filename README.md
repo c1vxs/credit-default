@@ -52,8 +52,10 @@ example output for evaluate:
 
 ```text
 TEST precision=0.436 recall=0.611 F1=0.509
-TEST average precision=0.516 ROC-AUC=0.754
+TEST average precision=0.516 ROC-AUC=0.753
 confusion matrix [[TN, FP], [FN, TP]]: [[3625, 1048], [516, 811]]
+
+Results can differ in the last digit between machines (ROC-AUC is 0.7535, which rounds to 0.753 or 0.754).
 ```
 
 short note:
