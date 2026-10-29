@@ -2,11 +2,13 @@
 from pathlib import Path
 
 import joblib
+from sklearn.base import BaseEstimator
 from sklearn.dummy import DummyClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.pipeline import Pipeline
 
+#BaseEstimator is the parent class of every scikit-learn model (LogisticRegression, KNeighborsClassifier, DummyClassifier) 
 from credit_default.config import ROOT, load_config
 from credit_default.features import build_preprocessor  # imports the function from features.py
 
@@ -23,7 +25,7 @@ class Trainer:
         self.random_state: int = cfg["random_state"]  # same fixed seed as the split, so models are reproducible
         self.model_cfg: dict = cfg["model"]  # final model and its settings, chosen in the notebook
 
-    def build_pipeline(self, classifier) -> Pipeline:
+    def build_pipeline(self, classifier: BaseEstimator) -> Pipeline:
         """Put the preparation and a classifier in one unfitted Pipeline."""
         return Pipeline([("prep", build_preprocessor()), ("clf", classifier)])  # S7 3.1: same preparation for every model
 

@@ -19,7 +19,7 @@ def train_model(cfg: dict) -> None:
     trainer.save(model) #joblib: train once then save so we can reuse in evaluate and predict
     print(f"Model trained on {len(X_train)} clients and saved to {trainer.model_path}")
 
-def evaluate_model(cfg:dict) -> None:
+def evaluate_model(cfg: dict) -> None:
     """Load the saved model and print its scores on the test set only one time"""
     loader = DatasetLoader(cfg)
     _, X_test, _, y_test = loader.split(loader.clean(loader.load_data())) #same seed and test set
