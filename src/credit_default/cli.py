@@ -3,7 +3,6 @@ import argparse
 import json
 
 import pandas as pd
-from sklearn.linear_model import LogisticRegression
 
 from credit_default.config import load_config
 from credit_default.data import DatasetLoader
@@ -16,7 +15,7 @@ def train_model(cfg: dict) -> None:
     loader = DatasetLoader(cfg) #same config as everywhere so path, target, test size, seed
     trainer = Trainer(cfg) #reads the model path and the seed from the same config
     X_train, _, y_train, _ = loader.split(loader.clean(loader.load_data())) #stratified split
-    model = trainer.build_pipeline(LogisticRegression(max_iter=1000)).fit(X_train, y_train) #pipeline fitted on train only
+    model = trainer.build_final().fit(X_train, y_train)  # model chosen in the notebook, from config.yaml
     trainer.save(model) #joblib: train once then save so we can reuse in evaluate and predict
     print(f"Model trained on {len(X_train)} clients and saved to {trainer.model_path}")
 
