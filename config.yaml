@@ -7,12 +7,12 @@ paths:
 
 # decision rule: catch at least 60 % of defaulters, then keep the best precision
 min_recall: 0.60
-threshold: 0.21 # the value printed in notebook Part 6
+threshold: 0.19 # the value printed in notebook Part 6
 
 # final model, chosen in notebook Part 5-6 (replace with the printed lines)
 model:
   name: knn
-  params: {n_neighbors: 51}
+  params: {n_neighbors: 201}
 
 # hyperparameter grids for GridSearchCV (notebook Part 5)
 grids:

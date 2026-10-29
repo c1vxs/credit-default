@@ -51,9 +51,9 @@ credit-default predict --input new_case.json
 example output for evaluate: 
 
 ```text
-TEST precision=0.422 recall=0.627 F1=0.505
-TEST average precision=0.512 ROC-AUC=0.753
-confusion matrix [[TN, FP], [FN, TP]]: [[3535, 1138], [495, 832]]
+TEST precision=0.436 recall=0.611 F1=0.509
+TEST average precision=0.516 ROC-AUC=0.754
+confusion matrix [[TN, FP], [FN, TP]]: [[3625, 1048], [516, 811]]
 ```
 
 short note:
