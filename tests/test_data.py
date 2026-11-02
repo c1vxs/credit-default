@@ -68,3 +68,14 @@ def test_save_and_load(tmp_path):
     t = Trainer(cfg)
     t.save(model)
     assert np.allclose(t.load().predict_proba(X_test), model.predict_proba(X_test))
+
+def test_clean_only_documented_codes():
+    """After cleaning, EDUCATION and MARRIAGE only hold documented codes and no row is lost."""
+    raw = loader.load_data()
+    assert set(df["EDUCATION"].unique()) == {1, 2, 3, 4}
+    assert set(df["MARRIAGE"].unique()) == {1, 2, 3}
+    assert len(df) == len(raw)
+
+def test_no_test_row_in_train():
+    """The split never puts the same client in train and test."""
+    assert set(X_train.index).isdisjoint(X_test.index)
