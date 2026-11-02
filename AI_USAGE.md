@@ -45,5 +45,5 @@ Decisions stayed ours: the dataset, the problem framing (who uses the tool and t
 | Reproducibility | Compared the library versions installed on our two machines (only SciPy differed) | Ran the CLI on my machine to confirm it matches the notebook (ROC-AUC 0.753) |
 | Team communication | Drafted some of my messages to my teammate | Edited and sent them |
 | Defense preparation | Built a revision guide in English (likely jury questions, quizzes) from the course materials and our code | Studied it and answered the questions myself |
-| Report (ML parts) | TO FILL IN: what AI did for the report, e.g. "gave an outline with the key numbers and reviewed my draft" (delete this row if you did not use AI) | TO FILL IN: e.g. "wrote the text myself" |
+| Report (ML parts) | what AI did for the report, e.g. "gave an outline with the key numbers and reviewed my draft" (delete this row if you did not use AI) |  e.g. "wrote the text myself" |
 | `AI_USAGE.md` | Drafted this section from my chats | Checked every row |
