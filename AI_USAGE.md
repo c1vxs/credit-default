@@ -28,7 +28,6 @@ Decisions stayed ours: the dataset, the problem framing (who uses the tool and t
 | Reproducibility | Traced the ROC-AUC difference between our machines (0.753 vs 0.754) to the SciPy version, then to rounding | Pinned `scipy==1.15.3` and added the note to the README |
 | `README.md` | Reviewed the structure and the install / usage sections | Wrote the problem framing ourselves |
 | Notebook (2 Nov) | Reviewed the notebook against the brief; wrote the cells for the ID check, the `PAY_` codes note, the "why 60 %" table and the error rates by sex | Placed them, ran the notebook and checked the numbers |
-| Report and defense | Helped draft the problem paragraph and a defense preparation document (likely jury questions) | Rewrote them in our own words |
 | `AI_USAGE.md` | Drafted this file from our chats | Checked every row |
 
 ## Mahamadou CISSE (EDA, modelling, notebook)
@@ -45,5 +44,4 @@ Decisions stayed ours: the dataset, the problem framing (who uses the tool and t
 | Reproducibility | Compared the library versions installed on our two machines (only SciPy differed) | Ran the CLI on my machine to confirm it matches the notebook (ROC-AUC 0.753) |
 | Team communication | Drafted some of my messages to my teammate | Edited and sent them |
 | Defense preparation | Built a revision guide in English (likely jury questions, quizzes) from the course materials and our code | Studied it and answered the questions myself |
-| Report (ML parts) | what AI did for the report, e.g. "gave an outline with the key numbers and reviewed my draft" (delete this row if you did not use AI) |  e.g. "wrote the text myself" |
 | `AI_USAGE.md` | Drafted this section from my chats | Checked every row |
